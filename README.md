@@ -1,1 +1,1 @@
-# utils
+# gzipper.sh - bash script which looks in a given directory for *.tar and if it finds any, it compresses them with gzip -1.  Optionally runs md5sum and places a file with .md5 suffix for each .tar.gz created.
