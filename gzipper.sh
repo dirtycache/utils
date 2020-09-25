@@ -58,6 +58,12 @@ if [[ $2 == "--md5" ]]
    fi
 fi
 
+DUTHEN=`du -h $WORKDIR | cut -f1`
+echo " "
+echo "-------------------------------------------------------------------------"
+echo "Directory size before gzipper: $DU"
+echo "-------------------------------------------------------------------------"
+
 for TAR in $TARBALLS ; do
 # if [ -f "$TAR.gz" ]; then
 #  echo " "
@@ -80,5 +86,12 @@ done
 
 echo " "
 echo "Done!"
+DUNOW=`du -h $WORKDIR | cut -f1`
 echo " "
+echo "-------------------------------------------------------------------------"
+echo "Directory size before gzipper: $DUTHEN"
+echo "Directory size before gzipper: $DUNOW"
+echo "-------------------------------------------------------------------------"
+echo " "
+
 exit 0
